@@ -27,7 +27,7 @@ app.use('/api', api);
 
 db_connect.sequelize.sync().then(
     () => {
-        app.listen(3300, () => {
+        app.listen(process.env.PORT || 3300, () => {
             console.log("Server start");
         })
     }).catch((error) => {console.log(error)});
