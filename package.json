@@ -1,0 +1,28 @@
+{
+  "name": "lab_09",
+  "version": "1.0.0",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "body-parser-xml": "^1.1.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2",
+    "jsonwebtoken": "^7.4.0",
+    "sequelize": "^3.30.4"
+  },
+  "description": "this file is test",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/syarhei/gh-test-msu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/syarhei/gh-test-msu/issues"
+  },
+  "homepage": "https://github.com/syarhei/gh-test-msu#readme",
+  "scripts": {
+    "test": "node index.js"
+  }
+}
