@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/syarhei/gh-test-msu#readme",
   "scripts": {
+    "start": "node index.js",
     "test": "node index.js"
   }
 }
