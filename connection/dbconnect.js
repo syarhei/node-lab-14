@@ -1,7 +1,10 @@
 module.exports = (Sequelize, config) => {
+
+    const cf = process.env.NODE_ENV === 'production' ? config.pg : config.db;
+
     const options = {
-        host: config.db.host,
-        dialect: config.db.dialect,
+        host: cf.host,
+        dialect: cf.dialect,
         logging: false,
         define: {
             timestamps: true,
@@ -14,7 +17,7 @@ module.exports = (Sequelize, config) => {
         }
     };
 
-    const sequelize = new Sequelize(config.db.name, config.db.user, config.db.password, options); // подключаемся к БД
+    const sequelize = new Sequelize(cf.name, cf.user, cf.password, options); // подключаемся к БД
     const user = require('../models/user')(Sequelize, sequelize);  // определяем все наши объекты базы данных
     const domain = require('../models/domain') (Sequelize, sequelize);
 

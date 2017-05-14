@@ -30,6 +30,13 @@
   "homepage": "https://github.com/syarhei/gh-test-msu#readme",
   "scripts": {
     "start": "node index.js",
-    "test": "node index.js"
+    "test": "jest"
+  },
+  "engines": {
+    "node": "6.10.0"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node"
   }
 }
