@@ -82,8 +82,8 @@ module.exports = (userServices, domainServices) => {
                                 domainServices.checkDomain(domain).then((data) => {
                                     if (data == undefined) {
                                         let cost = resultUser.balance - domain.cost;
-                                        Promise.all([userServices.updateUser(payload.user[0], cost),
-                                            domainServices.addDomain(payload.user[0], domain)]).then
+                                        Promise.all([userServices.updateUser(payload.user, cost),
+                                            domainServices.addDomain(payload.user, domain)]).then
                                         (response_send(request, response, { Success: 'Отлично, домен зарегестрирован в БД' }));
                                     }
                                     else response_send(request, response, {Error: 'Домен уже зарегистрирован в БД'});
