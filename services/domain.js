@@ -11,7 +11,7 @@ module.exports = (domain) => {
 
         function checkDomain(user) {
             return new Promise((resolve, reject) => {
-                domain.find({where: {name: user.name}}).then(resolve).catch(reject);
+                domain.findById(user.name).then(resolve).catch(reject);
             })
         }
 
