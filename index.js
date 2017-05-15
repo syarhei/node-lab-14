@@ -1,6 +1,5 @@
 const sequelize = require('sequelize');
 const express = require('express');
-const jwt = require('jsonwebtoken');
 const body_parser = require('body-parser');
 require('body-parser-xml') (body_parser);
 const cookie_parser = require('cookie-parser');
@@ -31,3 +30,5 @@ db_connect.sequelize.sync().then(
             console.log("Server start");
         })
     }).catch((error) => {console.log(error)});
+
+module.exports = app;
