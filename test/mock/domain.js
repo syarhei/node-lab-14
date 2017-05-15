@@ -7,17 +7,17 @@
 module.exports = (data) => {
     const mock = {
         findAll: jest.fn((params) => Promise.resolve(data)),
-        findById: jest.fn((id) =>
-            Promise((resolve, reject) => {
+        findById: jest.fn(function(id) {
+            return Promise((resolve, reject) => {
                 let element = null;
                 data.forEach((i, index) => {
                     if (data[index].name == id) element = data[index];
                 });
+                console.log(element);
                 if (element != null) resolve(element);
-
-                else reject({ error: "Not found id"});
+                else reject({error: "Not found id"});
             })
-        )
+        })
     };
 
     mock.mockClear = () => {
