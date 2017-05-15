@@ -1,5 +1,5 @@
 {
-  "name": "node_JS_lab_09",
+  "name": "node_JS_lab_14",
   "version": "1.0.0",
   "dependencies": {
     "axios": "^0.16.1",
@@ -19,7 +19,11 @@
   "main": "index.js",
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-jest": "^20.0.1",
+    "babel-preset-es2017": "^6.24.1",
+    "jest": "^20.0.1"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/syarhei/gh-test-msu.git"
