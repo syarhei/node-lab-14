@@ -16,9 +16,9 @@ module.exports = (domain) => {
         }
 
         function getDomains(user) {
-                return new Promise((resolve, reject) => {
-                    domain.findAll({where: {userName: user}}).then(resolve).catch(reject);
-                });
+            return new Promise((resolve, reject) => {
+                domain.findAll({where: {userName: user}}).then(resolve).catch(reject);
+            });
         }
 
         function getDomainsLimit(user, params) {
